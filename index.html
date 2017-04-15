@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Particles</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #FFF;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    canvas {
+      transform: scale(1.2);
+      margin: 30px;
+      cursor: crosshair;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 512px;
+      margin: 0 auto;
+    }
+
+    #fps {
+      float: right;
+    }
+
+    #ui {
+      margin: 50px 0;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Particles</h1>
+    <canvas id="c" width='512' height='512'></canvas>
+    <div id="ui">
+      <span id="fps">0 fps</span> Particle count <input id='count' value=200000 type="number">
+      <button onclick="settings()">Apply</button>
+    </div>
+  </div>
+  <script src='./particles.js'></script>
+</body>
+
+</html>
