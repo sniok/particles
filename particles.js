@@ -22,7 +22,7 @@ function loop() {
   frameTime = ~~(1000 / (Date.now() - now));
   now = Date.now();
 
-  requestAnimationFrame(function() {
+  requestAnimationFrame(function () {
     loop();
   });
 }
@@ -97,9 +97,9 @@ function update(A, mouse) {
 /**
  * Mouse
  */
-var rect = c.getBoundingClientRect();
 
 function pointerDown(e) {
+  var rect = c.getBoundingClientRect();
   var x = e.clientX || e.targetTouches[0].clientX;
   var y = e.clientY || e.targetTouches[0].clientY;
   mouse.x = (x - rect.left) / 1.2;
@@ -108,6 +108,7 @@ function pointerDown(e) {
 }
 
 function pointerMove(e) {
+  var rect = c.getBoundingClientRect();
   mouse.x = (e.clientX - rect.left) / 1.2;
   mouse.y = (e.clientY - rect.top) / 1.2;
 }
